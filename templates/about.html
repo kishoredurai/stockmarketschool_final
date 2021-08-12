@@ -1,16 +1,6 @@
 {% extends "base.html" %}
-
-
-
-
-<head>
-  <title>{% block title %}About{% endblock %}
-  </title>
-</head>
-
-
-<body>
-  {% block content %}
+{% block title %}About{% endblock %}
+{% block content %}
   <main id="main">
     <br><br><br>
     <section id="about">
@@ -244,7 +234,3 @@
 
   </main><!-- End #main -->
   {% endblock %}
-
-</body>
-
-</html>

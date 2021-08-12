@@ -1,12 +1,9 @@
-
 from flask import Flask, redirect, render_template
-
 app = Flask(__name__)
 
 @app.route('/home')
 @app.route("/")
 def home():
-    # return "<p>Hello, World!</p>"
     return render_template("index.html")
 
 
@@ -23,7 +20,6 @@ def events():
 @app.route('/course1')
 def course1():
     return render_template("courses/course1.html")
-
 
 @app.route('/course2')
 def course2():
