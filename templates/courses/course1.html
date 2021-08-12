@@ -63,29 +63,58 @@
             </div>
 
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Book seats</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for=""></label>
-                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                placeholder="">
-                            <small id="helpId" class="form-text text-muted">Help text</small>
+        <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <form name="submit-to-google-sheet" method="post" id = "courseform">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Book seats</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">Full Name</label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                        aria-describedby="helpId" placeholder="Enter Your Name" required>
+                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">Mobile Number</label>
+                                    <input type="text" class="form-control" name="mobile" id="mobile"
+                                        aria-describedby="helpId" placeholder="Enter Mobile Number" required>
+                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        aria-describedby="helpId" placeholder="Enter Your Email" required>
+                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">City</label>
+                                    <input type="text" class="form-control" name="city" id="city"
+                                        aria-describedby="helpId" placeholder="Enter City">
+                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                                <button type="submit"  class="btn btn-primary">Register</button>
+                            </div>
+
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                        <button type="button" class="btn btn-primary">Submit</button>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </div>
 
     </section><!-- End Cource Details Section -->
 
@@ -243,7 +272,28 @@
 
 </main><!-- End #main -->
 
+<!-- google sheet -->
 
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyFZA9ZmH_gS7lkICCN5VVaHh299HG1oEedgxSIVvGULfBe0gwuMrkwbw1Cg5RQz97s2A/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      $('#exampleModal').modal('hide');
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+
+      document.getElementById("courseform").reset();
+
+    })
+  </script>
+<script src="{{ url_for('static',filename='assets/assets_course/vendor/jquery/jquery.min.js') }}"></script>
+<script
+    src="{{ url_for('static',filename='assets/assets_course/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 {% endblock %}
 
 
