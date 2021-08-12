@@ -1,313 +1,156 @@
 {% extends "base.html" %}
 
-
-
 {% block head %}
 {{ super() }}
 {% block title %}home{% endblock %}
 <style>
   .modal-form {
-  border-radius: 5px;
-}
+    border-radius: 5px;
+  }
 
-.modal-form:active {
-  border-radius: 5px;
-  outline: none;
-  box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
-}
+  .modal-form:active {
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
+  }
 
-.modal-form:focus {
-  box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
-  border-radius: 5px;
-}
+  .modal-form:focus {
+    box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
+    border-radius: 5px;
+  }
 
-.modal {
-  font-family: "Nunito", sans-serif !important;
-  border-radius: 7px;
-  overflow: hidden;
-  background-color: transparent;
-}
+  .modal {
+    font-family: "Nunito", sans-serif !important;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: transparent;
+  }
 
-.modal .logo a img {
-  width: 30px;
-}
+  .modal .logo a img {
+    width: 30px;
+  }
 
-.modal .modal-content {
-  background-color: transparent;
-  border: none;
-  border-radius: 7px;
-}
+  .modal .modal-content {
+    background-color: transparent;
+    border: none;
+    border-radius: 7px;
+  }
 
-.modal .modal-content .modal-body {
-  border-radius: 7px;
-  overflow: hidden;
-  background-color: #efefef;
-  padding-left: 0px;
-  padding-right: 0px;
-  -webkit-box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
-  box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
-}
+  .modal .modal-content .modal-body {
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: #efefef;
+    padding-left: 0px;
+    padding-right: 0px;
+    -webkit-box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
+  }
 
-.modal .modal-content .modal-body h2 {
-  font-size: 18px;
-}
+  .modal .modal-content .modal-body h2 {
+    font-size: 18px;
+  }
 
-.modal .modal-content .modal-body p {
-  color: #777;
-  font-size: 14px;
-}
+  .modal .modal-content .modal-body p {
+    color: #777;
+    font-size: 14px;
+  }
 
-.modal .modal-content .modal-body h3 {
-  color: #012970;
-  font-size: 22px;
-  font-family: "Nunito", sans-serif;
-}
+  .modal .modal-content .modal-body h3 {
+    color: #012970;
+    font-size: 22px;
+    font-family: "Nunito", sans-serif;
+  }
 
-.modal .modal-content .modal-body .close-btn {
-  color: #000;
-}
+  .modal .modal-content .modal-body .close-btn {
+    color: #000;
+  }
 
-.modal .modal-content .modal-body .promo-img {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-}
+  .modal .modal-content .modal-body .promo-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
 
-.modal .cancel {
-  color: gray;
-  font-size: 14px;
-}
+  .modal .cancel {
+    color: gray;
+    font-size: 14px;
+  }
 
-.close {
-  background: white;
-  border: none;
-  font-size: 25px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+  .close {
+    background: white;
+    border: none;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-.close:hover {
-  transform: rotate(30deg);
-  color: blue;
-  /* font-size: 3px; */
-  transition: 0.12s;
-}
+  .close:hover {
+    transform: rotate(30deg);
+    color: blue;
+    /* font-size: 3px; */
+    transition: 0.12s;
+  }
 
-.space {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+  .space {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-.submit {
+  .submit {
 
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  /* padding: 10px 32px 12px 32px; */
-  padding: 10px !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-  border-radius: 4px;
-  transition: 0.5s;
-  line-height: 1;
-  /* margin: 10px; */
-  color: #fff;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-  text-transform: uppercase;
-  border: 3px solid #106eea;
-  background: #106eeaf3;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    /* padding: 10px 32px 12px 32px; */
+    padding: 10px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    border-radius: 4px;
+    transition: 0.5s;
+    line-height: 1;
+    /* margin: 10px; */
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    text-transform: uppercase;
+    border: 3px solid #106eea;
+    background: #106eeaf3;
 
-}
+  }
 
-.submit:hover {
-  color: #106eea;
-  background: transparent;
-  border-color: #106eea;
-}
+  .submit:hover {
+    color: #106eea;
+    background: transparent;
+    border-color: #106eea;
+  }
 
-.bg-image {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  .bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 70%;
-  position: relative;
-  height: 0;
-}
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 70%;
+    position: relative;
+    height: 0;
+  }
 
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 </style>
 {% endblock %}
 
 
-   
-
- 
-
-
-
-<style>
-  .modal-form {
-  border-radius: 5px;
-}
-
-.modal-form:active {
-  border-radius: 5px;
-  outline: none;
-  box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
-}
-
-.modal-form:focus {
-  box-shadow: 0 0 0 2px rgb(0 102 253 / 55%) !important;
-  border-radius: 5px;
-}
-
-.modal {
-  font-family: "Nunito", sans-serif !important;
-  border-radius: 7px;
-  overflow: hidden;
-  background-color: transparent;
-}
-
-.modal .logo a img {
-  width: 30px;
-}
-
-.modal .modal-content {
-  background-color: transparent;
-  border: none;
-  border-radius: 7px;
-}
-
-.modal .modal-content .modal-body {
-  border-radius: 7px;
-  overflow: hidden;
-  background-color: #efefef;
-  padding-left: 0px;
-  padding-right: 0px;
-  -webkit-box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
-  box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
-}
-
-.modal .modal-content .modal-body h2 {
-  font-size: 18px;
-}
-
-.modal .modal-content .modal-body p {
-  color: #777;
-  font-size: 14px;
-}
-
-.modal .modal-content .modal-body h3 {
-  color: #012970;
-  font-size: 22px;
-  font-family: "Nunito", sans-serif;
-}
-
-.modal .modal-content .modal-body .close-btn {
-  color: #000;
-}
-
-.modal .modal-content .modal-body .promo-img {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-}
-
-.modal .cancel {
-  color: gray;
-  font-size: 14px;
-}
-
-.close {
-  background: white;
-  border: none;
-  font-size: 25px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.close:hover {
-  transform: rotate(30deg);
-  color: blue;
-  /* font-size: 3px; */
-  transition: 0.12s;
-}
-
-.space {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.submit {
-
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  /* padding: 10px 32px 12px 32px; */
-  padding: 10px !important;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-  border-radius: 4px;
-  transition: 0.5s;
-  line-height: 1;
-  /* margin: 10px; */
-  color: #fff;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-  text-transform: uppercase;
-  border: 3px solid #106eea;
-  background: #106eeaf3;
-
-}
-
-.submit:hover {
-  color: #106eea;
-  background: transparent;
-  border-color: #106eea;
-}
-
-.bg-image {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 70%;
-  position: relative;
-  height: 0;
-}
-
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-</style>
-
-<body>
-
-
   {% block content %}
- <!-- Modal -->
-
-  
+  <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -392,7 +235,7 @@
       </div>
     </div>
   </div>
-<!-- ======= end modal ======= -->
+  <!-- ======= end modal ======= -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" data-aos="fade-up">
@@ -434,7 +277,6 @@
               </div>
             </div>
           </div>
-
           <!-- Slide 3 -->
           <!-- <div class="carousel-item" style="background: url(assets_carousel/img/slide/slide-3.jpg);"> -->
           <div class="carousel-item" style="background: url(https://instinctif.com/content/uploads/2021/02/shutterstock_1049641082.jpg);background-repeat: no-repeat;
@@ -539,11 +381,8 @@
           </div>
         </div>
       </div>
-
-
     </section>
     <!-- end team -->
-
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
@@ -615,7 +454,6 @@
       </div>
     </section>
     <!-- End Counts Section -->
-
 
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
@@ -782,7 +620,6 @@
     </section>
   </main><!-- End #main -->
   <script>
-
     // show modal
     $(window).on('load', function () {
 
@@ -821,43 +658,12 @@
       e.preventDefault();
       $('#exampleModalCenter').modal('hide');
       fetch(scriptURL, {
-        method: 'POST',
-        body: new FormData(form)
-      })
+          method: 'POST',
+          body: new FormData(form)
+        })
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
     })
   </script>
 
   <!-- End Why Us Section -->{% endblock %}
-
- 
- 
-
-
-
-
-
-
-
-  <!-- ======= Popular Courses Section ======= -->
-
-  <!-- End Popular Courses Section -->
-
-
-  <!-- ======= Clients Section ======= -->
-  <!-- End Clients Section -->
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
-</html>
