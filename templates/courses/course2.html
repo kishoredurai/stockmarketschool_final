@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+
+{% block title %}Option Trader{% endblock %}
+
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Advanced Options Trading (Options Trader)</h2>
+
+        </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Cource Details Section ======= -->
+    <section id="course-details" class="course-details">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <img src="{{ url_for('static',filename='assets/img/option-trading.jpg') }}" class="img-fluid" alt="">
+                    <h3>Level 2-Advanced Options Trading</h3>
+                    <p>
+                        In this course, you will learn about stock market Advanced Options Trading from basic to
+                        advanced
+                        techniques.
+                    </p>
+                    <h5> <b>Languages</b> <span class="badge bg-primary">Tamil</span> <span
+                            class="badge bg-secondary">English</span></h5>
+                </div>
+                <div class="col-lg-4">
+
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Duration</h5>
+                        <p><a href="#">15 hours</a></p>
+                    </div>
+
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Batch Training Fee</h5>
+                        <p>&#8377;20,000/-</p>
+                    </div>
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Individual Training Fee</h5>
+                        <p>&#8377;40,000/-</p>
+                    </div>
+
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Available Seats</h5>
+                        <p>100</p>
+                    </div>
+
+                    <div class="course-info d-flex justify-content-end align-items-end">
+                        <!-- <h5>Schedule</h5> -->
+                        <!-- <p>5.00 pm - 7.00 pm</p> -->
+                        <button type="button" class="btn btn-outline-primary"
+                            style="padding: 2px; padding-left: 5px;padding-right: 5px;" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Book seats</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Book seats</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                placeholder="">
+                            <small id="helpId" class="form-text text-muted">Help text</small>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cource Details Section -->
+
+    <!-- ======= Cource Details Tabs Section ======= -->
+    <section id="cource-details-tabs" class="cource-details-tabs">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav nav-tabs flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active show" data-toggle="tab" href="#tab-1">Eligibility</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" data-aos="fade-up" href="#tab-2">Content</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab-4">Results</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab-5">Results</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 mt-4 mt-lg-0">
+                    <div class="tab-content" data-aos="fade-up">
+                        <div class="tab-pane active show" data-aos="fade-up" id="tab-1">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Eligibility</h3>
+                                    <p class="font-italic">
+                                        Who has completed the Level 1-Technical Analysis Course.
+                                    </p>
+                                    <!-- <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint.
+                                        Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est
+                                        repellat minima eveniet eius et quis magni nihil. Consequatur dolorem
+                                        quaerat
+                                        quos qui similique accusamus nostrum rem vero</p> -->
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{{ url_for('static',filename='assets/img/course-eligibility.jpg') }}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" data-aos="fade-up" id="tab-2">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Content</h3>
+                                    <div class="font-italic">
+                                        <ol type="1">
+                                            <li>Options basics.</li>
+                                            <li>Fundamental of Options price.</li>
+                                            <li>Importance of technical analysis.</li>
+                                            <ol type="a">
+                                                <li> Delta.</li>
+                                                <li> Gamma.</li>
+                                                <li> Vega.</li>
+                                                <li> Theta.</li>
+                                                <li> Rho.</li>
+                                            </ol>
+                                            <li>Advanced Option strategies.</li>
+                                            <li>Bullish.</li>
+                                            <li>Bearish.</li>
+                                            <li>Neutral.</li>
+                                            <li>Indicators.</li>
+                                            <li>Options trading adjustments.</li>
+
+                                        </ol>
+
+                                    </div>
+                                    <!-- <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente
+                                        dila parde sonata raqer a videna mareta paulona marka</p>
+                                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et
+                                        reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et
+                                        velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto
+                                        madirna desera vafle de nideran pal</p> -->
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{{ url_for('static',filename='assets/img/course-content-preview.png') }}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="tab-pane" id="tab-3">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Results</h3>
+                                    <p class="font-italic">What you can do after the course completion:
+                                        Successful equity & future trader.
+                                        Intraday and short-term trader.
+                                        Support after the course: Lifetime free support.
+                                    </p>
+                                     <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis
+                                        quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima
+                                        molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam.
+                                        Soluta et harum voluptatem optio quae</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="../assets/img/course-details-tab-3.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="tab-pane" id="tab-4">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                                    <p class="font-italic">Totam aperiam accusamus. Repellat consequuntur iure
+                                        voluptas iure porro quis delectus</p>
+                                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam
+                                        necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in
+                                        consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam
+                                        quia a laborum inventore</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="../assets/img/course-details-tab-4.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="tab-pane" id="tab-5">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Results</h3>
+                                    <h5>
+                                        <p class="font-italic">What you can do after the course completion:
+
+                                        </p>
+                                    </h5>
+
+                                    <p>
+                                    <ul>
+                                        <li>Successful equity & future trader.</li>
+                                        <li>Intraday and short-term trader.</li>
+                                        <li>Support after the course: Lifetime free support.</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{{ url_for('static',filename='assets/img/course-result.jpg') }}" alt=""
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Cource Details Tabs Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta" data-aos="fade-up" >
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="text-center">
+                <h3>WANT TO LEARN FROM US ?</h3>
+                <!-- <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.</p> -->
+                <a class="cta-btn" href="{{ url_for('contact') }}">Enquire</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Cta Section -->
+</main><!-- End #main -->
+<script src="{{ url_for('static',filename='assets/assets_course/vendor/jquery/jquery.min.js') }}"></script>
+<script
+    src="{{ url_for('static',filename='assets/assets_course/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+{% endblock %}
