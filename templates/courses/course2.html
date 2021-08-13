@@ -283,12 +283,12 @@
 
 
     form.addEventListener('submit', e => {
-        swal({
-            title: "Good job!",
-            text: "Course booked successfully, Happy learning",
-            icon: "success",
-            button: "Ok",
-        });
+     
+        Swal.fire(
+            'Good job!',
+            'Course booked successfully, Happy learning!',
+            'success'
+        )
         e.preventDefault();
         $('#exampleModal').modal('hide');
 

@@ -24,11 +24,15 @@ def course1():
 @app.route('/option-trader')
 def course2():
     return render_template("courses/course2.html")
+
 @app.route('/contact')
 def contact():
    return render_template("contact.html")
+
 @app.route('/base')
 def base():
    return render_template("base.html")
+
+
 if __name__ == '__main__':
     app.run(debug=True)

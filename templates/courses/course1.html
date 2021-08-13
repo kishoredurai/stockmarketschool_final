@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Technical Trader{% endblock %}
-{% block content %} 
+{% block content %}
 <main id="main">
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
@@ -15,7 +15,8 @@
 
             <div class="row">
                 <div class="col-lg-8">
-                    <img src="{{ url_for('static',filename='assets/img/technical-analysis.jpg') }}" class="img-fluid" alt="">
+                    <img src="{{ url_for('static',filename='assets/img/technical-analysis.jpg') }}" class="img-fluid"
+                        alt="">
                     <h3>Level 1-Technical Analysis Course</h3>
                     <p>
                         In this course, you will learn about stock market technical analysis from basic to advanced
@@ -57,58 +58,56 @@
             </div>
 
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <form name="submit-to-google-sheet" method="post" id = "courseform">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <form name="submit-to-google-sheet" method="post" id="courseform">
 
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Book seats</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="">Full Name</label>
-                                    <input type="text" class="form-control" name="name" id="name"
-                                        aria-describedby="helpId" placeholder="Enter Your Name" required>
-                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
-                                </div>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="">Mobile Number</label>
-                                    <input type="text" class="form-control" name="mobile" id="mobile"
-                                        aria-describedby="helpId" placeholder="Enter Mobile Number" required>
-                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
-                                </div>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        aria-describedby="helpId" placeholder="Enter Your Email" required>
-                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
-                                </div>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="">City</label>
-                                    <input type="text" class="form-control" name="city" id="city"
-                                        aria-describedby="helpId" placeholder="Enter City">
-                                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                                <button type="submit"  class="btn btn-primary">Register</button>
-                            </div>
-
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Book seats</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                    </form>
-                </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="">Full Name</label>
+                                <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId"
+                                    placeholder="Enter Your Name" required>
+                                <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="">Mobile Number</label>
+                                <input type="text" class="form-control" name="mobile" id="mobile"
+                                    aria-describedby="helpId" placeholder="Enter Mobile Number" required>
+                                <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="email" class="form-control" name="email" id="email"
+                                    aria-describedby="helpId" placeholder="Enter Your Email" required>
+                                <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="">City</label>
+                                <input type="text" class="form-control" name="city" id="city" aria-describedby="helpId"
+                                    placeholder="Enter City">
+                                <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+
+                    </div>
+                </form>
             </div>
+        </div>
 
     </section><!-- End Cource Details Section -->
 
@@ -152,7 +151,8 @@
                                         quos qui similique accusamus nostrum rem vero</p> -->
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="{{ url_for('static',filename='assets/img/course-eligibility.jpg') }}" alt="" class="img-fluid">
+                                    <img src="{{ url_for('static',filename='assets/img/course-eligibility.jpg') }}"
+                                        alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -181,7 +181,8 @@
                                         madirna desera vafle de nideran pal</p> -->
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="{{ url_for('static',filename='assets/img/course-content-preview.png') }}" alt="" class="img-fluid">
+                                    <img src="{{ url_for('static',filename='assets/img/course-content-preview.png') }}"
+                                        alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -237,7 +238,8 @@
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="{{ url_for('static',filename='assets/img/course-result.jpg') }}" alt="" class="img-fluid">
+                                    <img src="{{ url_for('static',filename='assets/img/course-result.jpg') }}" alt=""
+                                        class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -249,7 +251,7 @@
     </section><!-- End Cource Details Tabs Section -->
 
     <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta" data-aos="fade-up" >
+    <section id="cta" class="cta" data-aos="fade-up">
         <div class="container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="text-center">
@@ -274,26 +276,24 @@
 
 
     form.addEventListener('submit', e => {
-        swal({
-  title: "Good job!",
-  text: "Course booked successfully, Happy learning",
-  icon: "success",
-  button: "Ok",
-});
-      e.preventDefault();
-      $('#exampleModal').modal('hide');
 
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
+        Swal.fire(
+            'Good job!',
+            'Course booked successfully, Happy learning!',
+            'success'
+        )
+        e.preventDefault();
+        $('#exampleModal').modal('hide');
 
-      document.getElementById("courseform").reset();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+
+        document.getElementById("courseform").reset();
 
     })
-  </script>
+</script>
 <script src="{{ url_for('static',filename='assets/assets_course/vendor/jquery/jquery.min.js') }}"></script>
 <script
     src="{{ url_for('static',filename='assets/assets_course/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 {% endblock %}
-
-

@@ -239,77 +239,100 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" data-aos="fade-up">
   <div class="hero-container">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+          <!-- <ol class="carousel-indicators" id="hero-carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol> -->
+          <!-- <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol> -->
 
-      <div class="carousel-inner" role="listbox">
+          <div class="carousel-indicators" id="hero-carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner" role="listbox">
 
-        <!-- Slide 1 -->
-        <!-- <div class="carousel-item" style="background: url(assets_carousel/img/slide/slide-8.jpg);"> -->
-        <div class="carousel-item active" style="background: url('{{ url_for('static',filename='assets/assets_carousel/img/carousel-gif.gif') }}');background-repeat: no-repeat;
+              <!-- Slide 1 -->
+              <!-- <div class="carousel-item" style="background: url(assets_carousel/img/slide/slide-8.jpg);"> -->
+              <div class="carousel-item active" data-bs-interval="10000" style="background: url('{{ url_for('static',filename='assets/assets_carousel/img/carousel-gif.gif') }}');background-repeat: no-repeat;
         background-size:cover;">
-          <div class="carousel-container">
-            <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown">Learn how to make money in stock market</h2>
-              <p class="animate__animated animate__fadeInUp"></p>
-              <div>
-                <a href="#team" class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn More</a>
+                  <div class="carousel-container">
+                      <div class="carousel-content">
+                          <h2 class="animate__animated animate__fadeInDown">Learn how to make money in stock market
+                          </h2>
+                          <p class="animate__animated animate__fadeInUp"></p>
+                          <div>
+                              <a href="#team"
+                                  class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn More</a>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Slide 2 -->
-        <!-- <div class="carousel-item active" style="background: url(assets_carousel/img/slide/slide-4.jpg);"> -->
-        <div class="carousel-item " style="background: url(https://media-exp1.licdn.com/dms/image/C5612AQHALJwCfHE9jg/article-cover_image-shrink_720_1280/0/1606881453611?e=1633564800&v=beta&t=0Hth0nBASP5bid4g5luc_5STqwnyeUlldflHDWzlhRg);background-repeat: no-repeat;
-        background-size:cover; ">
-          <div class="carousel-container">
-            <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown">We make you Independent Investor and Trader
-              </h2>
-              <p class="animate__animated animate__fadeInUp"></p>
-              <div>
-                <a href="#team" class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn
-                  More</a>
+              <!-- Slide 2 -->
+              <!-- <div class="carousel-item active" style="background: url(assets_carousel/img/slide/slide-4.jpg);"> -->
+              <div class="carousel-item" style="background: url(https://media-exp1.licdn.com/dms/image/C5612AQHALJwCfHE9jg/article-cover_image-shrink_720_1280/0/1606881453611?e=1633564800&v=beta&t=0Hth0nBASP5bid4g5luc_5STqwnyeUlldflHDWzlhRg);background-repeat: no-repeat;
+        background-size:cover; " data-bs-interval="10000">
+                  <div class="carousel-container">
+                      <div class="carousel-content">
+                          <h2 class="animate__animated animate__fadeInDown">We make you Independent Investor and
+                              Trader
+                          </h2>
+                          <p class="animate__animated animate__fadeInUp"></p>
+                          <div>
+                              <a href="#team"
+                                  class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn
+                                  More</a>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <!-- <div class="carousel-item" style="background: url(assets_carousel/img/slide/slide-3.jpg);"> -->
-        <div class="carousel-item" style="background: url(https://instinctif.com/content/uploads/2021/02/shutterstock_1049641082.jpg);background-repeat: no-repeat;
-          background-size:cover;">
-          <!-- <div class="carousel-background"><img src="assets_carousel/img/slide/slide-3.jpg" alt=""> -->
-          <!-- <div class="carousel-background" style="background-image: linear-gradient(toright, white, white);"></div> -->
-          <div class="carousel-container">
-            <div class="carousel-content">
-              <h2 class="animate__animated animate__fadeInDown"
-                style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Want to become independent successful trader
-              </h2>
-              <p class="animate__animated animate__fadeInUp"></p>
-              <div>
-                <a href="#team" class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn
-                  More</a>
+              <!-- Slide 3 -->
+              <!-- <div class="carousel-item" style="background: url(assets_carousel/img/slide/slide-3.jpg);"> -->
+              <div class="carousel-item" style="background: url(https://instinctif.com/content/uploads/2021/02/shutterstock_1049641082.jpg);background-repeat: no-repeat;
+          background-size:cover;" data-bs-interval="10000">
+                  <!-- <div class="carousel-background"><img src="assets_carousel/img/slide/slide-3.jpg" alt=""> -->
+                  <!-- <div class="carousel-background" style="background-image: linear-gradient(toright, white, white);"></div> -->
+                  <div class="carousel-container">
+                      <div class="carousel-content">
+                          <h2 class="animate__animated animate__fadeInDown"
+                              style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Want to become independent
+                              successful trader
+                          </h2>
+                          <p class="animate__animated animate__fadeInUp"></p>
+                          <div>
+                              <a href="#team"
+                                  class="btn-get-started animate__animated animate__fadeInUp scrollto">Learn
+                                  More</a>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
+              <!-- slide 4 -->
+
           </div>
-        </div>
-        <!-- slide 4 -->
+
+          <a class="carousel-control-prev" onclick="window.location.href='#heroCarousel'" role="button"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </a>
+
+          <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-target="#heroCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </a>
 
       </div>
-
-      <a class="carousel-control-prev" onclick="window.location.href='#heroCarousel'" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-
-    </div>
   </div>
 </section><!-- End Hero -->
 <!-- ======= Hero Section ======= -->
@@ -619,9 +642,17 @@
   </section>
 </main><!-- End #main -->
 <script>
+  $('#heroCarousel').on('slide.bs.carousel', function () {
+    // do something…
+    $('.carousel').carousel({
+      
+      interval: 1000
+    })
+    $('.carousel').carousel('cycle')
+  })
+
   // show modal
   $(window).on('load', function () {
-
 
     // $('#exampleModalCenter').modal('toggle');
     setTimeout(function () {
@@ -638,6 +669,7 @@
   });
 
   $(document).ready(function () {
+
     // alert("close");
     $("#close").click(function () {
       document.getElementById("modal-form").reset();
@@ -654,12 +686,12 @@
 
 
   form.addEventListener('submit', e => {
-    swal({
-      title: "Good job!",
-      text: "Thanks for your valuable message!",
-      icon: "success",
-      button: "Ok",
-    });
+
+    Swal.fire(
+      'Good job!',
+      'Thanks for your valuable message',
+      'success'
+    );
     e.preventDefault();
     $('#exampleModalCenter').modal('hide');
     fetch(scriptURL, {
