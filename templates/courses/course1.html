@@ -21,7 +21,7 @@
                         In this course, you will learn about stock market technical analysis from basic to advanced
                         techniques which can be used for Intraday trading, short term trading.
                     </p>
-                    <h5> <b>Languages</b> <span class="badge bg-primary">Tamil</span> <span
+                    <h5 class=""> <b>Languages</b> <span class="badge bg-primary">Tamil</span> <span
                             class="badge bg-secondary">English</span></h5>
                 </div>
 
@@ -57,7 +57,7 @@
             </div>
 
         </div>
-        <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <form name="submit-to-google-sheet" method="post" id = "courseform">
@@ -274,6 +274,12 @@
 
 
     form.addEventListener('submit', e => {
+        swal({
+  title: "Good job!",
+  text: "Course booked successfully, Happy learning",
+  icon: "success",
+  button: "Ok",
+});
       e.preventDefault();
       $('#exampleModal').modal('hide');
 

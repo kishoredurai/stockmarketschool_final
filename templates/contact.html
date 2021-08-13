@@ -79,7 +79,7 @@
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-                <button type="submit">Send Message</button>
+                <button type="submit" onclick="swalFunction();">Send Message</button>
               </div>
             </div>
           </form>
@@ -101,21 +101,30 @@
     </div>
   </section>
 </main>
+<script>
 
+   
+
+</script>
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzFtGIANNONcS8VibqtIskWS5y3OcLpYHqMUPWd7Xxd450xHtY5TtbYYcpFE4qcqGzSLQ/exec'
   const form = document.forms['submit-to-google-sheet']
 
-
   form.addEventListener('submit', e => {
+   
     e.preventDefault();
 
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
-
     document.getElementById("contactform").reset();
+    swal({
+      title: "Good job!",
+      text: "Your contact details submitted successfully",
+      icon: "success",
+      button: "Ok",
+    });
+  });
 
-  })
 </script>
 {% endblock %}

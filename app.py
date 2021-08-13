@@ -17,11 +17,11 @@ def events():
     return render_template("live-webinar.html")
 
 
-@app.route('/course1')
+@app.route('/technical-trader')
 def course1():
     return render_template("courses/course1.html")
 
-@app.route('/course2')
+@app.route('/option-trader')
 def course2():
     return render_template("courses/course2.html")
 @app.route('/contact')
