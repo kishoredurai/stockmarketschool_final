@@ -103,18 +103,22 @@
 </main>
 <script>
 
-   
+
 
 </script>
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzFtGIANNONcS8VibqtIskWS5y3OcLpYHqMUPWd7Xxd450xHtY5TtbYYcpFE4qcqGzSLQ/exec'
+  const scriptURL =
+    'https://script.google.com/macros/s/AKfycbzFtGIANNONcS8VibqtIskWS5y3OcLpYHqMUPWd7Xxd450xHtY5TtbYYcpFE4qcqGzSLQ/exec'
   const form = document.forms['submit-to-google-sheet']
 
   form.addEventListener('submit', e => {
-   
+
     e.preventDefault();
 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+      })
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
     document.getElementById("contactform").reset();
@@ -125,6 +129,5 @@
       button: "Ok",
     });
   });
-
 </script>
 {% endblock %}

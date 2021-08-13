@@ -239,11 +239,11 @@
                                     </h5>
 
                                     <p>
-                                    <ul>
-                                        <li>Successful equity & future trader.</li>
-                                        <li>Intraday and short-term trader.</li>
-                                        <li>Support after the course: Lifetime free support.</li>
-                                    </ul>
+                                        <ul>
+                                            <li>Successful equity & future trader.</li>
+                                            <li>Intraday and short-term trader.</li>
+                                            <li>Support after the course: Lifetime free support.</li>
+                                        </ul>
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -278,12 +278,13 @@
 <!-- google sheet -->
 
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyFZA9ZmH_gS7lkICCN5VVaHh299HG1oEedgxSIVvGULfBe0gwuMrkwbw1Cg5RQz97s2A/exec'
+    const scriptURL =
+        'https://script.google.com/macros/s/AKfycbyFZA9ZmH_gS7lkICCN5VVaHh299HG1oEedgxSIVvGULfBe0gwuMrkwbw1Cg5RQz97s2A/exec'
     const form = document.forms['submit-to-google-sheet']
 
 
     form.addEventListener('submit', e => {
-     
+
         Swal.fire(
             'Good job!',
             'Course booked successfully, Happy learning!',
@@ -292,7 +293,10 @@
         e.preventDefault();
         $('#exampleModal').modal('hide');
 
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
 
@@ -301,6 +305,6 @@
     })
 </script>
 <script src="{{ url_for('static',filename='assets/assets_course/vendor/jquery/jquery.min.js') }}"></script>
-<script
-    src="{{ url_for('static',filename='assets/assets_course/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static',filename='assets/assets_course/vendor/bootstrap/js/bootstrap.bundle.min.js') }}">
+</script>
 {% endblock %}

@@ -33,6 +33,9 @@ def contact():
 def base():
    return render_template("base.html")
 
+@app.route('/carousel')
+def carousel():
+   return render_template("carousel.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
