@@ -1,6 +1,7 @@
 from flask import Flask, redirect, render_template
 app = Flask(__name__)
 
+
 @app.route('/home')
 @app.route("/")
 def home():
@@ -21,21 +22,26 @@ def events():
 def course1():
     return render_template("courses/course1.html")
 
+
 @app.route('/option-trader')
 def course2():
     return render_template("courses/course2.html")
 
+
 @app.route('/contact')
 def contact():
-   return render_template("contact.html")
+    return render_template("contact.html")
+
 
 @app.route('/base')
 def base():
-   return render_template("base.html")
+    return render_template("base.html")
+
 
 @app.route('/carousel')
 def carousel():
-   return render_template("carousel.html")
+    return render_template("carousel.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
