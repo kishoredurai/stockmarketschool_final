@@ -12,10 +12,11 @@
         <!-- <h2>Contact</h2> -->
         <p>Contact Us</p>
       </header>
-      <div>
+      <div class="shadow  pt-1 ps-1 pe-1   mb-0">
         <iframe style="border:0; width: 100%; height: 350px;"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62556.35453475778!2d77.24185392386067!3d11.496353309804238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9215d6d1b28f9%3A0xf48946a7dfcfeb1a!2sBannari%20Amman%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1628938839187!5m2!1sen!2sin"
-          frameborder="0" allowfullscreen></iframe>
+          frameborder="0" allowfullscreen class="rounded-3">
+        </iframe>
       </div>
       <br><br>
       <div class="row gy-4 costumContact">
@@ -110,9 +111,9 @@
     e.preventDefault();
 
     fetch(scriptURL, {
-      method: 'POST',
-      body: new FormData(form)
-    })
+        method: 'POST',
+        body: new FormData(form)
+      })
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
     document.getElementById("contactform").reset();
