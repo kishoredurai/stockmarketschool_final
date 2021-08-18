@@ -1,10 +1,22 @@
 {% extends "base.html" %}
+{% block head %}
+{{ super() }}
 {% block title %}About{% endblock %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+{% endblock %}
+
 {% block content %}
 <main id="main">
-  <br><br><br>
+
+  <br><br>
+  <br>
   <section id="about">
     <div class="container" data-aos="fade-up">
+
       <header class="section-header">
 
         <p>About us</p>
@@ -14,36 +26,37 @@
 
         <div class="col-lg-6 content order-lg-1 order-2">
           <!-- <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore
-              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo
-              consequat.
-            </p> -->
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat.
+          </p> -->
           <p><strong>
               <h4>Why Join Us</h4>
             </strong></p>
 
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="fas fa-shopping-bag"></i></div>
-            <h4 class="title"><a href="">We're different</a></h4>
-            <p class="description">We don't teach strategies, but we let you create a strategy.<br>We make the
-              behavior of the stock exchange understandable for you.
+            <div class="icon"><i class="fas fa-fingerprint"></i></div>
+            <h4 class="title"><a href="">We are unique</a></h4>
+            <p class="description">We do not teach strategies, but we let you create a strategy. We make the behavior of
+              the stock exchange understandable for you
+
             </p>
 
           </div>
 
           <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="far fa-image"></i></div>
+            <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
             <h4 class="title"><a href="">We teach system-based trading</a></h4>
-            <p class="description">You don't have to sit all day to make a profit.<br>System takes care of the profit,
+            <p class="description">You do not have to sit all day to make a profit.<br>System takes care of the profit,
               you just have to define the system.
             </p>
           </div>
 
           <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="far fa-chart-bar"></i></div>
-            <h4 class="title"><a href="">Free lifelong support</a></h4>
+            <div class="icon"><i class="fas fa-hands"></i></div>
+            <h4 class="title"><a href="">Free lifetime support</a></h4>
             <p class="description">We do not charge anything for support even after the training.<br>Provide
               guidelines for capital-based investment planning.
 
@@ -59,8 +72,7 @@
 
       <div class="row about-extra">
         <div class="col-lg-6" data-aos="fade-right">
-          <img src="{{ url_for('static',filename='assets/img/about-extra-2.svg') }}" class="img-sm-fluid" width="600px"
-            height="300px" alt="">
+          <img src="{{ url_for('static',filename='assets/img/about-extra-2.svg') }}" class="img-sm-fluid" width="600px" height="300px" alt="">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
           <h4 class="mx-0">Who We Are</h4>
@@ -74,10 +86,13 @@
             A professional trader who makes consistent profits in the stock market, directs thousands of people to
             trade, and generates consistent returns with an appropriate risk management
             system.
+
           </p>
           <p>
             We have developed a trading system that makes trading easier and limits risk. We create hundreds of
             strategies based on market conditions.
+
+
           </p>
         </div>
       </div>
@@ -137,29 +152,30 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
           <div class="icon-box">
 
-            <div class="icon"><i class="fas fa-user-graduate"></i></div>
-            <h4 class="text-center"><a href="">Student Experiance is Paramount</a></h4>
-            <p class="text-center"> Your learning experiance is our number 1 priority. Everything else is a designed
-              around that. We will keep striving for making the student experience better</p>
+            <div class="icon"><i class="far fa-smile"></i></div>
+            <h4 class="text-center"><a href="">Your Experience is Important</a></h4>
+            <p class="text-center"> Your learning experience is our most priority. Everything else is designed around
+              that. We will keep striving to make your experience much better.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-assistive-listening-systems"></i></div>
-            <h4><a href="">Always Ready to Listen</a></h4>
-            <p>Since you, the student, is our top priority, we are always here to listen to your suggestions, requests
-              or complaints. We can't promise we will solve each and eveyone of them right away but we definitely are
-              going to try hard.</p>
+            <h4><a href="">We always listen to you</a></h4>
+            <p>As you are our top priority, we are always here to listen to your doubts, suggestions or complaints. We
+              can't promise that we will solve each and everyone of them right away but we definitely will try to
+              resolve all your problems.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-flask"></i></div>
-            <h4><a href="">Keep Experimenting & Learing</a></h4>
-            <p>We strive to keep ourselves up to date with the latest technologies and developments in the stock
-              market. That way, we keep ourselves and our students ahead of the game.</p>
+            <h4><a href="">Continue to learn and experiment</a></h4>
+            <p>We strive to keep ourselves up to date with the new strategies and technologies in the stock market. That
+              way, we keep you ahead of the game. We will expect you to explore the strategies taught in the training
+              and outside of it.</p>
           </div>
         </div>
 
@@ -172,31 +188,35 @@
     <div class="container" data-aos="fade-up">
 
       <header class="section-header" data-aos="fade-up">
+
         <p>Expectation From Students</p>
         <p>
           <h2>
             This is what we expect from students
           </h2>
         </p>
+
+
       </header>
 
       <div class="row" data-aos="fade-up">
 
+
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
           <div class="icon-box">
             <div class="icon"><i class="fas fa-briefcase"></i></div>
-            <h4><a href="">Work Hard</a></h4>
-            <p>Be ready to work hard. There are no shortcuts to success and there is definitely not one in the stock
-              market.</p>
+            <h4><a href="">Interest and Dedication</a></h4>
+            <p>Daily dedicate time to invest in learning with interest. Be ready to work hard. There are no shortcuts to
+              success and there is definitely not one in the stock market.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="200">
           <div class="icon-box">
-            <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
-            <h4><a href="">Slow & Steady </a></h4>
-            <p>Results in the stock market don't happen over time. keep learing with the intent of learning. Making
-              money will just become a byproduct of that.</p>
+            <div class="icon"><i class="fas fa-medal"></i></div>
+            <h4><a href="">Experience with Passions </a></h4>
+            <p>Results in the stock market don't happen overnight and it comes with only experience. So keep learning
+              with passion. </p>
           </div>
         </div>
 
@@ -204,8 +224,8 @@
           <div class="icon-box">
             <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
             <h4><a href="">Don't Make Expensive Mistakes</a></h4>
-            <p>Preserve your capital. Do not waste your capital on expensive mistakes. Go through the course first
-              before trading with any serious capital.</p>
+            <p>Preserve your capital. Do not waste your capital on expensive mistakes as many people do. Practice and
+              backtest before investing significant capital.</p>
           </div>
         </div>
 
@@ -215,14 +235,14 @@
   </section><!-- End Services Section -->
 
   <!-- ======= Cta Section ======= -->
-  <section id="cta" class="cta" data-aos="fade-up">
-    <div class="container" data-aos="fade-up">
+  <section id="cta" class="cta" data-aos="fade-up" data-aos-delay="300">
+    <div class="container" data-aos="fade-up" data-aos-delay="600">
 
       <div class="text-center">
         <h3>WANT TO LEARN FROM US ?</h3>
         <!-- <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.</p> -->
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.</p> -->
         <a class="cta-btn" href="{{ url_for('contact') }}">Enquire</a>
       </div>
 

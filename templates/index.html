@@ -4,6 +4,28 @@
 {{ super() }}
 {% block title %}Home{% endblock %}
 <style>
+   p.one {
+    border: solid 2px white;
+    text-align: center;
+    border: solid 2px white;
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    /* 5px top and bottom, 20px on the sides */
+  }
+
+  .one:hover>b {
+    color: black !important;
+    animation: ease-in-out;
+    animation-delay: 1s;
+    transition: 0.25s;
+  }
+
+  .course-learn-more {
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
   .modal-form {
     border-radius: 5px;
   }
@@ -148,11 +170,11 @@
 {% endblock %}
 
 
-{% block content %}
+{% block content %} 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+<div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered"  role="document" >
     <div class="modal-content rounded-0">
 
       <div class="modal-body py-0">
@@ -206,18 +228,18 @@
                         placeholder="Enter email" required>
                     </div>
                     <div class="form-group space">
-                      <i class="fas fa-mobile text-primary shadow"></i> <label for="numbers">Phone number</label>
+                      <i class="fas fa-mobile text-primary shadow bg-body"></i> <label for="numbers">Phone number</label>
                       <input type="tel" class="form-control modal-form shadow-sm" id="phonenumber" name="phonenumber"
                         placeholder="Enter phone number" aria-required="true" required>
 
                     </div>
                     <div class="form-group space">
-                      <i class="fas fa-comment-alt text-primary shadow"></i> <label for="message">Message</label>
+                      <i class="fas fa-comment-alt text-primary shadow bg-ligth"></i> <label for="message">Message</label>
                       <textarea name="message" id="message" class="form-control modal-form shadow-sm" placeholder="Message"
                         aria-describedby="helpId"></textarea>
                     </div>
                     <div class="form-group  d-flex flex-row justify-content-center">
-                      <p class="custom-note"><small>By clicking submit I agree to our all the <a href="#">Terms and
+                      <p class="custom-note"><small>By clicking submit I agree to our all the <a href="{{ url_for('terms') }}">Terms and
                             conditions</a></small></p>
                     </div>
                     <div class="form-group d-flex flex-row justify-content-center">
@@ -363,7 +385,7 @@
                     to advanced
                     techniques.</p>
                   <div class="course-learn-more">
-                    <a href="courses/course1.html">
+                    <a href="{{ url_for('course1') }}">
                       <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
                       <p class="one"><b>Learn More</b></p>
                     </a>
@@ -389,7 +411,7 @@
                     making
                     consistent income.</p>
                   <div class="course-learn-more">
-                    <a href="courses/course2.html">
+                    <a href="{{ url_for('course2') }}">
                       <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Learn More</button> -->
                       <p class="one"><b>Learn More</b></p>
                     </a>

@@ -774,14 +774,12 @@ p.one {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  /* background: #fff; */
-  background: #0575E6;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #021B79, #0575E6);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #021B79, #0575E6);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #fff;
+  /* background: #0575E6;
 
+  background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+
+  background: linear-gradient(to right, #021B79, #0575E6); */
 }
 
 #preloader:before {
@@ -792,12 +790,20 @@ p.one {
   border: 6px solid #106eea;
   border-top-color: #e2eefd;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   -webkit-animation: animate-preloader 1s linear infinite;
   animation: animate-preloader 1s linear infinite;
 }
-
+#preloader img{
+  content: "";
+  position: fixed;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
 @-webkit-keyframes animate-preloader {
   0% {
     transform: rotate(0deg);
@@ -817,8 +823,6 @@ p.one {
     transform: rotate(360deg);
   }
 }
-
-
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -864,7 +868,7 @@ section {
   padding: 15px 0;
   background: #012970;
   min-height: 40px;
-  margin-top: 100px;
+  margin-top: 85px;
   color: #fff;
 }
 
@@ -1902,18 +1906,17 @@ section {
 .features .feature-box:hover {
   /* box-shadow: 2px 2px 5px 2px rgb(0 0 0 / 25%),
     -2px -2px 5px 2px rgb(0 0 0 / 25%); */
-  /* box-shadow: 2px 2px 10px 2px #3440db7a, -2px -2px 10px 2px #3440db7a; */
-  box-shadow: 1px 1px 10px 1px #aeabe0,
-    -1px -1px 10px 1px #aeabe0;
+  box-shadow: 2px 2px 10px 2px #3440db7a, -2px -2px 10px 2px #3440db7a;
+  /* box-shadow: 2px 2px 20px #4154f18a, -2px -2px 20px #4154f18a; */
   border-radius: 5px;
   /* transition-delay: 0.12s; */
   /* color: white; */
-  background-color: #106eea;
+  /* background-color: #106eea; */
 }
 
-.features .feature-box:hover>h3 {
+/* .features .feature-box:hover>h3 {
   color: white;
-}
+} */
 
 .features .feature-box h3 {
   font-size: 18px;
@@ -2029,6 +2032,7 @@ section {
   font-size: 15px;
   color: #848484;
 }
+
 
 /*--------------------------------------------------------------
 # Services
@@ -2264,11 +2268,12 @@ section {
 }
 
 .contact .info-box:hover {
-  box-shadow: 2px 2px 20px #7b68ee69,
-    -2px -2px 20px #7b68ee69;
+  /* box-shadow: 2px 2px 20px #7b68ee69,
+    -2px -2px 20px #7b68ee69; */
   transition: 0.5s;
   background-color: #106eea;
   color: white;
+  /* box-shadow: 2px 2px 20px #4154f18a, -2px -2px 20px #4154f18a; */
 }
 
 .contact .info-box:hover>h3 {
@@ -2315,8 +2320,9 @@ section {
 }
 
 .contact .php-email-form:hover {
-  box-shadow: 2px 2px 20px #7b68ee69,
-    -2px -2px 20px #7b68ee69;
+  /* box-shadow: 2px 2px 20px #7b68ee69,
+    -2px -2px 20px #7b68ee69; */
+    /* box-shadow: 2px 2px 20px #4154f15c, -2px -2px 20px #4154f15c; */
   transition: 0.25s;
 }
 
@@ -2415,8 +2421,6 @@ section {
     transform: rotate(360deg);
   }
 }
-
-
 
 /*--------------------------------------------------------------
 # Footer

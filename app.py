@@ -42,6 +42,9 @@ def base():
 def carousel():
     return render_template("carousel.html")
 
+@app.route('/terms-of-service')
+def terms():
+   return render_template("terms-and-conditions.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
