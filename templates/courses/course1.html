@@ -76,7 +76,8 @@
 
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-center" id="exampleModalLabel">Book seats</h5>
+                            <h5 class="modal-title text-center" style="margin-left: auto;" id="exampleModalLabel">Book
+                                seats</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -163,8 +164,8 @@
                                         quos qui similique accusamus nostrum rem vero</p> -->
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="{{ url_for('static',filename='assets/img/eligibility.svg') }}"
-                                        alt="" class="img-fluid">
+                                    <img src="{{ url_for('static',filename='assets/img/eligibility.svg') }}" alt=""
+                                        class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -297,7 +298,7 @@
 
 <script>
     const scriptURL =
-        'https://script.google.com/macros/s/AKfycbyFZA9ZmH_gS7lkICCN5VVaHh299HG1oEedgxSIVvGULfBe0gwuMrkwbw1Cg5RQz97s2A/exec'
+        'https://script.google.com/macros/s/AKfycbwBSEY9YvYpHD8ncRAw1t7Tb2BLx-IE85PPwKOT1lS1eaBBFY5zqIRbD9qjSkx7SfkM/exec'
     const form = document.forms['submit-to-google-sheet']
 
 
@@ -306,7 +307,8 @@
         Swal.fire(
             'Good job!',
             'Course booked successfully, Happy learning!',
-            'success'
+            'success',
+            'Done'
         )
         e.preventDefault();
         $('#exampleModal').modal('hide');

@@ -1,4 +1,6 @@
 from flask import Flask, redirect, render_template
+import flask
+
 app = Flask(__name__)
 
 
@@ -15,7 +17,7 @@ def about():
 
 @app.route('/events')
 def events():
-    return render_template("live-webinar.html")
+    return render_template("events.html")
 
 
 @app.route('/technical-trader')
@@ -42,9 +44,11 @@ def base():
 def carousel():
     return render_template("carousel.html")
 
+
 @app.route('/terms-and-conditions')
 def terms():
-   return render_template("terms-and-conditions.html")
+    return render_template("terms-and-conditions.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)

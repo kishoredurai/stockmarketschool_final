@@ -1,16 +1,18 @@
 /**
-* Template Name: FlexStart - v1.4.0
-* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: FlexStart - v1.4.0
+ * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 // window.onload = function(){ 
 //   alert("Hi there");
 //   }
 
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+var Tawk_API = Tawk_API || {},
+  Tawk_LoadStart = new Date();
 (function () {
-  var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+  var s1 = document.createElement("script"),
+    s0 = document.getElementsByTagName("script")[0];
   s1.async = true;
   s1.src = 'https://embed.tawk.to/610668b7d6e7610a49adfe5f/1fc0gi49d';
   s1.charset = 'UTF-8';

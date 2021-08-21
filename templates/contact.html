@@ -17,7 +17,7 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15640.21537243876!2d77.5663411789111!3d11.476039469584787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba940651e42d457%3A0xfa1e2e3539520710!2sAppakudal%2C%20Tamil%20Nadu%20638315!5e0!3m2!1sen!2sin!4v1629528899767!5m2!1sen!2sin"
           frameborder="0" allowfullscreen class="rounded-3">
         </iframe>
-        
+
       </div>
       <br><br>
       <div class="row gy-4 costumContact">
@@ -42,7 +42,7 @@
                 <i class="bi bi-envelope"></i>
                 <h3>Email Us</h3>
                 <p>info@stockmarketschool.co.in</p>
-                  <p>support@stockmarket.co.in</p>
+                <p>support@stockmarket.co.in</p>
               </div>
             </div>
             <div class="col-md-6">
@@ -105,7 +105,7 @@
 </script>
 <script>
   const scriptURL =
-    'https://script.google.com/macros/s/AKfycbzFtGIANNONcS8VibqtIskWS5y3OcLpYHqMUPWd7Xxd450xHtY5TtbYYcpFE4qcqGzSLQ/exec'
+    'https://script.google.com/macros/s/AKfycbxSuMYyBMGC2oY6LCcd2IMH_V0-0l8un57N--M2idXhI4poneHOYGHHNNRRV6TpQLXE/exec'
   const form = document.forms['submit-to-google-sheet']
 
   form.addEventListener('submit', e => {
@@ -119,12 +119,12 @@
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
     document.getElementById("contactform").reset();
-    swal({
-      title: "Good job!",
-      text: "Your contact details submitted successfully",
-      icon: "success",
-      button: "Ok",
-    });
+    // Swal.fire(
+    //   'Good job!',
+    //   'Mail sent successfully, Happy learning!',
+    //   'success',
+    //   'Done'
+    // )
   });
 </script>
 {% endblock %}
