@@ -311,9 +311,9 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 
   // Toggle .header-scrolled class to #header when page is scrolled
   $(window).scroll(function () {
-    console.log($(this).scrollTop());
+    // console.log($(this).scrollTop());
     if ($(this).scrollTop() > 100) {
-      console.log($(this).scrollTop());
+      // console.log($(this).scrollTop());
       $('#header').addClass('header-scrolled');
       $('#topbar').addClass('topbar-scrolled');
     } else {

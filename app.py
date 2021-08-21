@@ -42,7 +42,7 @@ def base():
 def carousel():
     return render_template("carousel.html")
 
-@app.route('/terms-of-service')
+@app.route('/terms-and-conditions')
 def terms():
    return render_template("terms-and-conditions.html")
 
