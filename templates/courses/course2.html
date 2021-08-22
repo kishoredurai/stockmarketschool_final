@@ -68,7 +68,7 @@
 
                     <div class="modal-content">
                         <div class="modal-header ">
-                            <h5 class="modal-title" style="margin-left: auto;"  id="exampleModalLabel">Book seats</h5>
+                            <h5 class="modal-title" style="margin-left: auto;" id="exampleModalLabel">Book seats</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -122,10 +122,12 @@
                 <div class="col-lg-3">
                     <ul class="nav nav-tabs flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active show" data-toggle="tab" href="#tab-1">Eligibility</a>
+                            <a class="nav-link active show" data-toggle="tab" id="eligibility"
+                                href="#tab-1">Eligibility</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" data-aos="fade-up" href="#tab-2">Content</a>
+                            <a class="nav-link" data-toggle="tab" data-aos="fade-up" id="content"
+                                href="#tab-2">Content</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
@@ -134,7 +136,7 @@
                             <a class="nav-link" data-toggle="tab" href="#tab-4">Results</a>
                         </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab-5">Results</a>
+                            <a class="nav-link" data-toggle="tab" id="results" href="#tab-5">Results</a>
                         </li>
                     </ul>
                 </div>
@@ -156,8 +158,8 @@
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
                                     <!-- <img src="{{ url_for('static',filename='assets/img/course-eligibility.jpg') }}"
                                         alt="" class="img-fluid"> -->
-                                        <img src="{{ url_for('static',filename='assets/img/eligibility.svg') }}"
-                                        alt="" class="img-fluid">
+                                    <img src="{{ url_for('static',filename='assets/img/eligibility.svg') }}" alt=""
+                                        class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -294,7 +296,58 @@
     </section>
     <!-- End Cta Section -->
 </main><!-- End #main -->
+<script>
+    $(document).ready(function () {
+        $("#eligibility").click(function () {
+            $("#tab-1").show(500);
+            $("#tab-2").hide();
+            $("#tab-5").hide();
+        });
+        $("#content").click(function () {
+            $("#tab-1").hide();
+            $("#tab-2").show(500);
+            $("#tab-5").hide();
 
+        });
+        $("#results").click(function () {
+            $("#tab-1").hide();
+            $("#tab-2").hide();
+            $("#tab-5").show(500);
+        });
+    });
+    window.addEventListener('load', tabToggle());
+
+    function tabToggle() {
+
+        setTimeout(function () {
+            $("#tab-1").show(500);
+            $("#tab-2").hide();
+            $("#tab-5").hide();
+            $("#eligibility").addClass('active show');
+            $("#content").removeClass('active show');
+            $("#results").removeClass('active show');
+        }, 3000);
+        setTimeout(function () {
+            $("#tab-1").hide();
+            $("#tab-2").show(500);
+            $("#tab-5").hide();
+            $("#eligibility").removeClass('active show');
+            $("#content").addClass('active show');
+            $("#results").removeClass('active show');
+        }, 6000);
+        setTimeout(function () {
+            $("#tab-1").hide();
+            $("#tab-2").hide();
+            $("#tab-5").show(500);
+            // $("#tab-5").toggle();
+            $("#eligibility").removeClass('active show');
+            $("#content").removeClass('active show');
+            $("#results").addClass('active show');
+            tabToggle();
+        }, 9000);
+        // clearTimeout();
+    }
+</script>
 <!-- google sheet -->
 
 <script>
@@ -319,12 +372,33 @@
             })
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
-
+        sendEmail();
         document.getElementById("courseform").reset();
 
     })
 </script>
 <script src="{{ url_for('static',filename='assets/assets_course/vendor/jquery/jquery.min.js') }}"></script>
 <script src="{{ url_for('static',filename='assets/assets_course/vendor/bootstrap/js/bootstrap.bundle.min.js') }}">
+</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+    function sendEmail() {
+        userName = document.getElementById("name").value;
+        // console.log(userName);
+        Email.send({
+                Host: "smtp.gmail.com",
+                Username: "cloud@bitsathy.ac.in",
+                Password: "Cloud@987",
+                To: 'devanand.cs19@bitsathy.ac.in',
+                From: 'cloud@bitsathy.ac.in',
+                Subject: "Reply | Stock Market School",
+                Body: '<p>Hi <span><strong>' +
+                    userName +
+                    '</strong></span>,<p>Thank you for showing interest in learning with us. <br>Your Advanced Options Trading Course booked successfully <br> Happy Learning ! .</p><strong>Thanks <br>Stock Market School</strong>',
+            })
+            .then(function (message) {
+                // alert("mail sent successfully")
+            });
+    }
 </script>
 {% endblock %}

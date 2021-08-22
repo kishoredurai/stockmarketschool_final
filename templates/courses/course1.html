@@ -132,10 +132,11 @@
                 <div class="col-lg-3">
                     <ul class="nav nav-tabs flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active show" data-toggle="tab" href="#tab-1">Eligibility</a>
+                            <a class="nav-link active show" data-toggle="tab" id="eligibility"
+                                href="#tab-1">Eligibility</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab-2">Content</a>
+                            <a class="nav-link" data-toggle="tab" href="#tab-2" id="content">Content</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
@@ -144,7 +145,7 @@
                             <a class="nav-link" data-toggle="tab" href="#tab-4">Results</a>
                         </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab-5">Results</a>
+                            <a class="nav-link" data-toggle="tab" href="#tab-5" id="results">Results</a>
                         </li>
                     </ul>
                 </div>
@@ -199,41 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="tab-pane" id="tab-3">
-                            <div class="row">
-                                <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>Results</h3>
-                                    <p class="font-italic">What you can do after the course completion:
-                                        Successful equity & future trader.
-                                        Intraday and short-term trader.
-                                        Support after the course: Lifetime free support.
-                                    </p>
-                                     <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis
-                                        quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima
-                                        molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam.
-                                        Soluta et harum voluptatem optio quae</p>
-                                </div>
-                                <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="../assets/img/course-details-tab-3.png" alt="" class="img-fluid">
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="tab-pane" id="tab-4">
-                            <div class="row">
-                                <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                                    <p class="font-italic">Totam aperiam accusamus. Repellat consequuntur iure
-                                        voluptas iure porro quis delectus</p>
-                                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam
-                                        necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in
-                                        consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam
-                                        quia a laborum inventore</p>
-                                </div>
-                                <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="../assets/img/course-details-tab-4.png" alt="" class="img-fluid">
-                                </div>
-                            </div>
-                        </div> -->
+
                         <div class="tab-pane" id="tab-5">
                             <div class="row">
                                 <div class="col-lg-8 details order-2 order-lg-1">
@@ -294,6 +261,58 @@
 
 </main><!-- End #main -->
 
+<script>
+    $(document).ready(function () {
+        $("#eligibility").click(function () {
+            $("#tab-1").show(500);
+            $("#tab-2").hide();
+            $("#tab-5").hide();
+        });
+        $("#content").click(function () {
+            $("#tab-1").hide();
+            $("#tab-2").show(500);
+            $("#tab-5").hide();
+
+        });
+        $("#results").click(function () {
+            $("#tab-1").hide();
+            $("#tab-2").hide();
+            $("#tab-5").show(500);
+        });
+    });
+    window.addEventListener('load', tabToggle());
+
+    function tabToggle() {
+
+        setTimeout(function () {
+            $("#tab-1").show(500);
+            $("#tab-2").hide();
+            $("#tab-5").hide();
+            $("#eligibility").addClass('active show');
+            $("#content").removeClass('active show');
+            $("#results").removeClass('active show');
+        }, 5000);
+        setTimeout(function () {
+            $("#tab-1").hide();
+            $("#tab-2").show(500);
+            $("#tab-5").hide();
+            $("#eligibility").removeClass('active show');
+            $("#content").addClass('active show');
+            $("#results").removeClass('active show');
+        }, 10000);
+        setTimeout(function () {
+            $("#tab-1").hide();
+            $("#tab-2").hide();
+            $("#tab-5").show(500);
+            // $("#tab-5").toggle();
+            $("#eligibility").removeClass('active show');
+            $("#content").removeClass('active show');
+            $("#results").addClass('active show');
+            tabToggle();
+        }, 20000);
+        // clearTimeout();
+    }
+</script>
 <!-- google sheet -->
 
 <script>
@@ -319,12 +338,34 @@
             })
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
-
+        sendEmail();
         document.getElementById("courseform").reset();
+
 
     })
 </script>
 <script src="{{ url_for('static',filename='assets/assets_course/vendor/jquery/jquery.min.js') }}"></script>
 <script src="{{ url_for('static',filename='assets/assets_course/vendor/bootstrap/js/bootstrap.bundle.min.js') }}">
+</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+    function sendEmail() {
+        userName = document.getElementById("name").value;
+        // console.log(userName);
+        Email.send({
+                Host: "smtp.gmail.com",
+                Username: "cloud@bitsathy.ac.in",
+                Password: "Cloud@987",
+                To: 'devanand.cs19@bitsathy.ac.in',
+                From: 'cloud@bitsathy.ac.in',
+                Subject: "Reply | Stock Market School",
+                Body: '<p>Hi <span><strong>' +
+                    userName +
+                    '</strong></span>,<p>Thank you for showing interest in learning with us. <br>Your Technical Analysis Course booked successfully <br> Happy Learning ! .</p><strong>Thanks <br>Stock Market School</strong>',
+            })
+            .then(function (message) {
+                // alert("mail sent successfully")
+            });
+    }
 </script>
 {% endblock %}
