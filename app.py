@@ -1,7 +1,22 @@
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template,url_for,request
 import flask
 
 app = Flask(__name__)
+
+@app.errorhandler(404)
+def page_not_found(e):
+
+    app.logger.info(f"Page not found: {request.url}")
+
+    return redirect(url_for('home'))
+
+
+@app.errorhandler(403)
+def page_not_founds(e):
+
+    app.logger.info(f"Page not found: {request.url}")
+
+    return redirect(url_for('home'))
 
 
 @app.route('/home')
@@ -51,4 +66,4 @@ def terms():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='192.168.225.134')

@@ -94,7 +94,7 @@ p.one {
   background-color: rgba(17, 17, 17, 0.8);
   overflow: hidden;
   padding: 0;
-  font-family: 'Delius', cursive;
+  /* font-family: 'Delius', cursive; */
 }
 
 .carousel-item {
@@ -142,9 +142,9 @@ p.one {
   margin-bottom: 30px;
   font-size: 48px;
   font-weight: 400;
-  /* font-family: 'Delius', cursive; */
-  font-family: 'Klee One', cursive;
-
+  /* font-family: 'Delius', cursive;  */
+ 
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #hero h2 span {
@@ -1120,10 +1120,11 @@ section {
 .navbar a:focus {
   display: flex;
   align-items: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
   justify-content: space-between;
   /* padding: 10px 0 10px 30px; */
   /* padding: 10px 30 10px 30px; */
-  /* font-family: "Nunito", sans-serif; */
   font-size: 16px;
   font-weight: 650;
   /* font-weight: 700; */
