@@ -118,6 +118,7 @@
       })
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
+      sendEmail();
     document.getElementById("contactform").reset();
     // Swal.fire(
     //   'Good job!',
@@ -126,5 +127,27 @@
     //   'Done'
     // )
   });
+</script>
+<script type="text/javascript">
+  function sendEmail() {
+    userName = document.getElementById("name").value;
+    email = document.getElementById("email").value;
+
+    // console.log(userName);
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "cloud@bitsathy.ac.in",
+        Password: "Cloud@987",
+        To: email,
+        From: 'cloud@bitsathy.ac.in',
+        Subject: "Reply | Stock Market School",
+        Body: '<p>Hi <span><strong>' +
+          userName +
+          '</strong></span>,<p>Thank you for showing interest in learning with us. <br>Our team will get back to you shortly.</p><strong>Thanks <br>Stock Market School</strong>',
+      })
+      .then(function (message) {
+        // alert("mail sent successfully")
+      });
+  }
 </script>
 {% endblock %}

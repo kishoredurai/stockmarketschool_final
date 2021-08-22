@@ -384,12 +384,14 @@
 <script type="text/javascript">
     function sendEmail() {
         userName = document.getElementById("name").value;
+        email = document.getElementById("email").value;
+
         // console.log(userName);
         Email.send({
                 Host: "smtp.gmail.com",
                 Username: "cloud@bitsathy.ac.in",
                 Password: "Cloud@987",
-                To: 'devanand.cs19@bitsathy.ac.in',
+                To: email,
                 From: 'cloud@bitsathy.ac.in',
                 Subject: "Reply | Stock Market School",
                 Body: '<p>Hi <span><strong>' +
