@@ -66,4 +66,4 @@ def terms():
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.225.134')
+    app.run(host='127.0.0.1')

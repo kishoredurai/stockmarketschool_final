@@ -34,7 +34,7 @@
               <div class="info-box">
                 <i class="bi bi-telephone"></i>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                <p>+91 9688348987<br><span style="color: transparent;">+91 9688348987</span></p>
               </div>
             </div>
             <div class="col-md-6">
@@ -61,7 +61,7 @@
             <div class="row gy-4">
 
               <div class="col-md-6">
-                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                <input type="text" name="name" id="name" class="form-control" onkeyup="this.value = this.value.toUpperCase();" placeholder="Your Name" required>
               </div>
 
               <div class="col-md-6 ">
@@ -69,7 +69,7 @@
               </div>
 
               <div class="col-md-12">
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" id="subject" minlength="5" name="subject" placeholder="Subject" required>
               </div>
               <div class="col-md-12">
                 <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message"

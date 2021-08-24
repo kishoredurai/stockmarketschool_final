@@ -83,31 +83,28 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="">Full Name</label>
-                                <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId"
+                                <input type="text" class="form-control" name="name"  onkeyup="this.value = this.value.toUpperCase();" id="name" aria-describedby="helpId"
                                     placeholder="Enter Your Name" required>
                                 <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                
                             </div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
+                            <div class="form-group mt-3">
                                 <label for="">Mobile Number</label>
                                 <input type="text" class="form-control" name="mobile" id="mobile"
-                                    aria-describedby="helpId" placeholder="Enter Mobile Number" required>
-                                <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                    aria-describedby="helpId" placeholder="Enter Mobile Number" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required>
+                                 <small id="helpId" class="form-text text-primary">Enter 10 digit mobile number</small>
                             </div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
+ 
+                            <div class="form-group mt-3">
                                 <label for="">Email</label>
                                 <input type="email" class="form-control" name="email" id="email"
                                     aria-describedby="helpId" placeholder="Enter Your Email" required>
-                                <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                                <small id="helpId" class="form-text text-primary">Enter Valid Email ID</small>
                             </div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
+                      
+                            <div class="form-group mt-3">
                                 <label for="">City</label>
-                                <input type="text" class="form-control" name="city" id="city" aria-describedby="helpId"
+                                <input type="text" class="form-control" name="city" id="city" onkeyup="this.value = this.value.toUpperCase();" aria-describedby="helpId"
                                     placeholder="Enter City">
                                 <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
                             </div>
